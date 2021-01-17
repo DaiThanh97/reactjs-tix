@@ -1,0 +1,21 @@
+// “Base” → “Vendors” → “Helpers” →
+// “Layout” → “Component” → “Page” →
+// “Theme”
+
+@import './helper/variable';
+
+@import './base/reset';
+@import './base/normailize';
+
+@import './vendor/slick/slick';
+
+@import './helper/mixin';
+
+@import './layout/navbar';
+@import './layout/cinema';
+
+@import './component/back-news';
+@import './component/button';
+
+@import './page/Home/carousel';
+@import './page/Home/movie';

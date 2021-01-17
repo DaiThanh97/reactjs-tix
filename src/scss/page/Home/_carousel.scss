@@ -1,0 +1,95 @@
+#carousel {
+    margin-top: 60px;
+    .carousel__banner {
+        cursor: pointer;
+        position: relative;
+        .carousel__img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            img {
+                opacity: 1;
+            }
+        }
+        .btn-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.4s;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+    .buy-ticket {
+        transform: translateY(-55%);
+        .buy-ticket__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $color-white-0;
+            box-shadow: 0 0 10px rgba(0,0,0,.4);
+            border-radius: 5px;
+            .dropdown {
+                display: flex;
+                justify-content: space-between;
+                border-right: 1px solid rgba(238,238,238,.88);
+                button {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: $pd-3;
+                    border: none;
+                    background-color: $color-white-0;
+                    &::after {
+                        content: none;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                    i {
+                        color: $color-gray-primary;
+                    }
+                }
+            }
+            .film {
+                flex: 2;
+                
+            }
+            .cinema {
+                flex: 1;
+            }
+            .date {
+                flex: 1;
+            }
+            .turn {
+                flex: 1;
+            }
+        }
+    }
+    @include respond-to('lg') {
+        .carousel__banner {
+            height: 540px;
+            
+        } 
+    }
+    @include respond-to('md') {
+        .carousel__banner {
+            height: 420px;
+        } 
+    }
+    @include respond-to('sm') {
+        .carousel__banner {
+            height: 330px;
+        } 
+    }
+    @include respond-to('xs') {
+        .carousel__banner {
+            height: 250px;
+        } 
+    }
+}
