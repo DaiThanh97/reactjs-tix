@@ -4,13 +4,13 @@
     font-weight: $fw;
 }
 
-@mixin button ($clor, $bgClor, $fw, $fs, $bdClor, $pdy, $pdx) {
+@mixin button ($clor, $bgClor, $fw, $fs, $bdClor, $bdRad, $pdy, $pdx) {
     color: $clor;
     background-color: $bgClor;
     font-weight: $fw;
     font-size: $fs;
     border: 1px solid $bdClor;
-    border-radius: 4px;
+    border-radius: $bdRad;
     padding: $pdy $pdx;
 }
 

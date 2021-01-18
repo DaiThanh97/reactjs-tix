@@ -1,23 +1,31 @@
-import { ROUTES } from './configs/routes';
+import { ROUTES, ROUTES_LOGIN } from './configs/routes';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Fragment } from 'react';
+import { Main, LogIn } from './templates/main'
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import Loading from './components/Loading/Loading';
 
 function App() {
 
     const generateRoutes = () => {
         return ROUTES.map((route, index) => {
-            return <Route {...route} key={index} />
+            return <Main {...route} key={index} />
+        })
+    }
+
+    const generateRoutesLogin = () => {
+        return ROUTES_LOGIN.map((route, index) => {
+            return <LogIn {...route} key={index} />
         })
     }
 
     return (
         <Fragment>
             <BrowserRouter>
-                <NavBar />
+                <Loading />
                 <Switch>
                     {generateRoutes()}
+                    {generateRoutesLogin()}
                 </Switch>
             </BrowserRouter>
         </Fragment>

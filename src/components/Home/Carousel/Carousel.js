@@ -22,6 +22,8 @@ export default function Carousel(props) {
     const settings = useRef({
         dots: true,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,

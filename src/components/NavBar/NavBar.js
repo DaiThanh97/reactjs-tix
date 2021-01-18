@@ -1,13 +1,35 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-scroll';
 
 export default function NavBar(props) {
-    const menu = ['Lịch Chiếu', 'Cụm Rạp', 'Tin Tức', 'Ứng Dụng'];
+    const menu = [
+        {
+            name: 'Lịch Chiếu',
+            ref: 'movie',
+            offset: -70
+        },
+        {
+            name: 'Cụm Rạp',
+            ref: 'cinema',
+            offset: 0
+        },
+        {
+            name: 'Tin Tức',
+            ref: 'review',
+            offset: 40
+        },
+        {
+            name: 'Ứng Dụng',
+            ref: 'app-platform',
+            offset: 0
+        }
+    ];
     const refMenu = useRef(menu);
 
     const generateMenu = () => {
         return refMenu.current.map((menu, index) => {
             return <li className="nav-item" key={index}>
-                <a className="nav-link" href="#">{menu}</a>
+                <Link className="nav-link" to={menu.ref} smooth={true} duration={600} offset={menu.offset}>{menu.name}</Link>
             </li>
         })
     }

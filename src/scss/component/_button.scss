@@ -4,6 +4,7 @@
                     $fw-1, 
                     $fs-1, 
                     $color-gray-2, 
+                    4px,
                     $pd-1,
                     $pd-4);
 }
@@ -15,6 +16,87 @@
                     $fw-2, 
                     $fs-2 - 2, 
                     $color-red-primary, 
+                    4px,
                     $pd-1,
                     $pd-1);
+}
+
+.btn-more {
+    margin: auto;
+    @include button($color-gray-3, 
+                    transparent, 
+                    $fw-2, 
+                    $fs-1, 
+                    $color-gray-3, 
+                    4px,
+                    $pd-1 - 3,
+                    $pd-4);
+    transition: all 0.4s;
+    &:hover {
+        color: $color-white-0;
+        background-color: $color-red-primary;
+        border-color: $color-red-primary;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-get-app {
+    @include button($color-white-0, 
+                    $color-red-primary, 
+                    $fw-3, 
+                    $fs-1 + 1, 
+                    $color-red-primary, 
+                    4px,
+                    $pd-1,
+                    $pd-2);
+}
+
+.btn-login-social {
+    @include button($color-white-0, 
+                    #2f4d84, 
+                    $fw-2, 
+                    $fs-2, 
+                    transparent, 
+                    50%,
+                    0,
+                    0);
+    height: 50px;
+    width: 50px;
+    transition: all 0.4s;
+    &:hover {
+        color: $color-white-0;
+        filter: brightness(60%);
+    }
+}
+
+.btn-login-facebook {
+    @extend .btn-login-social;
+}
+
+.btn-login-google {
+    @extend .btn-login-social;
+    background-color: #bb4628;
+}
+
+.btn-login-twitter {
+    @extend .btn-login-social;
+    background-color:#1da1f2;
+}
+
+.btn-close {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: #081630;
+    box-shadow: -3px 5px $fs-1 rgba($color: $color-black-0, $alpha: 0.6);
+    border-radius: 50%;
+    .btn-login-close {
+        @include text(#455570, $fs-2, $fw-0);
+    }
 }

@@ -20,6 +20,7 @@ header {
                 transition: all 0.3s;
                 &:hover {
                     color: $color-red-primary;
+                    cursor: pointer;
                 }
             }
         }

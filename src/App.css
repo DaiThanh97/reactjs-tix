@@ -93,7 +93,8 @@ header {
         font-weight: 400;
         transition: all 0.3s; }
         header .nav__mid .nav-item .nav-link:hover {
-          color: #fb4226; }
+          color: #fb4226;
+          cursor: pointer; }
   header .nav__user {
     display: flex;
     align-items: center; }
@@ -153,6 +154,7 @@ header {
   #cinema .cinema__content .cinema__icon {
     flex: 1; }
     #cinema .cinema__content .cinema__icon .cinema__icon-nav {
+      height: 700px;
       border: 1px solid #ebebec;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px; }
@@ -179,6 +181,7 @@ header {
         background-color: #ebebec; }
   #cinema .cinema__content .cinema__stage {
     flex: 3;
+    height: 700px;
     border-top: 1px solid #ebebec;
     border-bottom: 1px solid #ebebec; }
     #cinema .cinema__content .cinema__stage .cinema__stage-content .nav-item .nav-link {
@@ -194,14 +197,22 @@ header {
         #cinema .cinema__content .cinema__stage .cinema__stage-content .nav-item .nav-link .cinema__stage-item img {
           width: 50px;
           height: 50px; }
+        #cinema .cinema__content .cinema__stage .cinema__stage-content .nav-item .nav-link .cinema__stage-item .stage__info .stage__brand-bhd {
+          color: #8bc541;
+          font-size: 15px;
+          font-weight: 400; }
+          #cinema .cinema__content .cinema__stage .cinema__stage-content .nav-item .nav-link .cinema__stage-item .stage__info .stage__brand-bhd .axx {
+            color: #000;
+            font-size: 15px;
+            font-weight: 400; }
         #cinema .cinema__content .cinema__stage .cinema__stage-content .nav-item .nav-link .cinema__stage-item .stage__info .stage__location {
           color: #949494;
-          font-size: 15px;
+          font-size: 12px;
           font-weight: 400; }
         #cinema .cinema__content .cinema__stage .cinema__stage-content .nav-item .nav-link .cinema__stage-item .stage__info .detail {
           color: #fb4226;
-          font-size: 15px;
-          font-weight: 400; }
+          font-size: 12px;
+          font-weight: 500; }
     #cinema .cinema__content .cinema__stage .cinema__stage-content .nav-item::after {
       content: "";
       display: block;
@@ -211,7 +222,7 @@ header {
       background-color: #ebebec; }
   #cinema .cinema__content .cinema__movie {
     flex: 7;
-    max-height: 506px;
+    height: 700px;
     border: 1px solid #ebebec;
     overflow-y: auto; }
     #cinema .cinema__content .cinema__movie .movie__item {
@@ -224,15 +235,15 @@ header {
           height: 50px; }
         #cinema .cinema__content .cinema__movie .movie__item .movie__item-top .movie__info .info__title {
           color: #000;
-          font-size: 10px;
-          font-weight: 700; }
+          font-size: 15px;
+          font-weight: 500; }
         #cinema .cinema__content .cinema__movie .movie__item .movie__item-top .movie__info .info_statistic {
           color: #9b9b9b;
-          font-size: 10px;
-          font-weight: 300; }
+          font-size: 12px;
+          font-weight: 400; }
       #cinema .cinema__content .cinema__movie .movie__item .movie__item-bot h1 {
         color: #000;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 500; }
       #cinema .cinema__content .cinema__movie .movie__item .movie__item-bot .show-time__list {
         display: flex;
@@ -245,11 +256,11 @@ header {
           margin: 0 10px 10px 0; }
           #cinema .cinema__content .cinema__movie .movie__item .movie__item-bot .show-time__list .show-time__item .time-from {
             color: #108f3e;
-            font-size: 15px;
+            font-size: 18px;
             font-weight: 500; }
           #cinema .cinema__content .cinema__movie .movie__item .movie__item-bot .show-time__list .show-time__item .time-to {
             color: #9b9b9b;
-            font-size: 10px;
+            font-size: 15px;
             font-weight: 500; }
           #cinema .cinema__content .cinema__movie .movie__item .movie__item-bot .show-time__list .show-time__item:hover .time-from {
             color: #fb4226; }
@@ -281,6 +292,68 @@ header {
         #cinema .cinema__content .cinema__icon-nav .nav-link {
           padding: 5px !important; } }
 
+footer {
+  background-color: #222; }
+  footer .title-header {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400; }
+  footer a {
+    color: #949494;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2.3;
+    text-decoration: none !important;
+    transition: all 0.4s; }
+    footer a:hover {
+      color: #fff;
+      font-weight: bold; }
+  footer .partner-content {
+    width: 70%;
+    margin: auto; }
+    footer .partner-content .partner-content__icon {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px 15px; }
+      footer .partner-content .partner-content__icon a img {
+        width: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: all 0.3s; }
+      footer .partner-content .partner-content__icon a:hover {
+        filter: brightness(50%); }
+  footer .icon-app {
+    height: 30px;
+    margin: 0 5px; }
+  footer .line {
+    height: 1px;
+    background-color: #949494; }
+  footer .footer__bot {
+    color: #949494;
+    font-size: 12px;
+    font-weight: 500; }
+    footer .footer__bot .logo-company {
+      width: 80px;
+      border-radius: 8px; }
+    footer .footer__bot .support {
+      color: #fb4226;
+      font-size: 12px;
+      font-weight: 500; }
+    footer .footer__bot .logo-bct {
+      width: 130px; }
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: #fff; }
+  #loading .loading__holder {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
 .back-news {
   height: 120px;
   background: url(./assets/img/back-news.png) no-repeat 100%/cover; }
@@ -303,6 +376,69 @@ header {
   border: 1px solid #fb4226;
   border-radius: 4px;
   padding: 10px 10px; }
+
+.btn-more {
+  margin: auto;
+  color: #949494;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 15px;
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 7px 25px;
+  transition: all 0.4s; }
+  .btn-more:hover {
+    color: #fff;
+    background-color: #fb4226;
+    border-color: #fb4226; }
+  .btn-more:focus {
+    outline: none; }
+
+.btn-get-app {
+  color: #fff;
+  background-color: #fb4226;
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid #fb4226;
+  border-radius: 4px;
+  padding: 10px 15px; }
+
+.btn-login-social, .btn-login-facebook, .btn-login-google, .btn-login-twitter {
+  color: #fff;
+  background-color: #2f4d84;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 0 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.4s; }
+  .btn-login-social:hover, .btn-login-facebook:hover, .btn-login-google:hover, .btn-login-twitter:hover {
+    color: #fff;
+    filter: brightness(60%); }
+
+.btn-login-google {
+  background-color: #bb4628; }
+
+.btn-login-twitter {
+  background-color: #1da1f2; }
+
+.btn-close {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: #081630;
+  box-shadow: -3px 5px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 50%; }
+  .btn-close .btn-login-close {
+    color: #455570;
+    font-size: 20px;
+    font-weight: 300; }
 
 #carousel {
   margin-top: 60px; }
@@ -434,7 +570,7 @@ header {
       border-radius: 4px; }
       #movie .movie__content .movie__info .movie__img .movie__rating span {
         color: #fff;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 500; }
       #movie .movie__content .movie__info .movie__img .movie__rating img {
         width: 8px; }
@@ -490,3 +626,169 @@ header {
 @media screen and (max-width: 575px) {
   #movie .movie__content {
     padding-top: 25px; } }
+
+#review .review__nav {
+  border: none;
+  align-items: baseline;
+  justify-content: center; }
+  #review .review__nav .nav-item .nav-link {
+    border: none;
+    padding: 10px 15px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.4s; }
+    #review .review__nav .nav-item .nav-link.active {
+      cursor: context-menu;
+      color: #fb4226;
+      font-size: 25px;
+      font-weight: 500; }
+    #review .review__nav .nav-item .nav-link:hover {
+      font-size: 25px; }
+
+#review .review-item img {
+  border-radius: 4px; }
+
+#review .review-item .title-article {
+  text-decoration: none; }
+  #review .review-item .title-article h4 {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0 20px;
+    transition: all 0.3s; }
+    #review .review-item .title-article h4:hover {
+      color: #fb4226; }
+
+#review .review-item p {
+  color: #949494;
+  font-size: 13px;
+  font-weight: 400; }
+
+#review .review-item .review-item__like {
+  opacity: 0.5; }
+
+#review .review-list .review-list__item {
+  display: flex; }
+  #review .review-list .review-list__item .banner-movie {
+    width: 50px;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  #review .review-list .review-list__item .title-movie {
+    text-decoration: none; }
+    #review .review-list .review-list__item .title-movie span {
+      color: #000;
+      font-size: 15px;
+      font-weight: 400;
+      transition: all 0.3s; }
+      #review .review-list .review-list__item .title-movie span:hover {
+        color: #fb4226; }
+
+#app-platform {
+  background: url(./assets/img/backapp.jpg);
+  background-size: contain; }
+  #app-platform .app-platform__content {
+    padding: 150px 0 80px; }
+    #app-platform .app-platform__content .app-platform__detail h1 {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 500; }
+    #app-platform .app-platform__content .app-platform__detail p {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 400; }
+    #app-platform .app-platform__content .app-platform__detail a {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+      text-decoration: underline; }
+    #app-platform .app-platform__content .app-platform__img {
+      padding: 0 26.5%; }
+    #app-platform .app-platform__content .app-carousel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2% 29.5%; }
+      #app-platform .app-platform__content .app-carousel .slick-list {
+        border-radius: 20px; }
+
+#login {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/img/bglogin.jpg");
+  background-position: center;
+  background-size: contain; }
+  #login .login-wrapper {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 35px 30px;
+    background-image: linear-gradient(to bottom, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 6px; }
+  #login .login-title {
+    width: 209px;
+    margin-bottom: 25px; }
+  #login .btn-login {
+    width: 100%; }
+  #login .forgot-password, #login .register-now {
+    text-decoration: none;
+    color: #1b5ab3;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s; }
+    #login .forgot-password:hover, #login .register-now:hover {
+      color: #174280; }
+  @media screen and (max-width: 767px) {
+    #login .login-wrapper {
+      width: 100%;
+      height: 100%; }
+    #login .btn-close {
+      transform: initial; } }
+
+#register {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/img/bglogin.jpg");
+  background-position: center;
+  background-size: contain; }
+  #register .register-wrapper {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 35px 30px;
+    background-image: linear-gradient(to bottom, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 6px; }
+  #register .register-title {
+    width: 209px;
+    margin-bottom: 25px; }
+  #register .btn-register {
+    width: 100%; }
+  #register .login-now {
+    text-decoration: none;
+    color: #1b5ab3;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s; }
+    #register .login-now:hover {
+      color: #174280; }
+  @media screen and (max-width: 767px) {
+    #register .register-wrapper {
+      width: 100%;
+      height: 100%; }
+    #register .btn-close {
+      transform: initial; } }

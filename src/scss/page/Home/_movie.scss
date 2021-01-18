@@ -68,7 +68,7 @@
                     height: 38px;
                     border-radius: 4px;
                     span {
-                        @include text ($color-white-0, $fs-1, $fw-2);
+                        @include text ($color-white-0, $fs-1 + 2, $fw-2);
                     }
                     img {
                         width: 8px;

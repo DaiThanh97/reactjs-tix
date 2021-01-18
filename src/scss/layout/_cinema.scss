@@ -4,6 +4,7 @@
         .cinema__icon {
             flex: 1;
             .cinema__icon-nav {
+                height: 700px;
                 border: 1px solid $color-white-1;
                 border-top-left-radius: 4px;
                 border-bottom-left-radius: 4px;
@@ -39,6 +40,7 @@
         }
         .cinema__stage {
             flex: 3;
+            height: 700px;
             border-top: 1px solid $color-white-1;
             border-bottom: 1px solid $color-white-1;
             .cinema__stage-content {
@@ -59,11 +61,17 @@
                                 height: 50px;
                             }
                             .stage__info {
+                                .stage__brand-bhd {
+                                    @include text($color-green-1, $fs-1, $fw-1);
+                                    .axx {
+                                        @include text($color-black-0, $fs-1, $fw-1);
+                                    }
+                                }
                                 .stage__location {
-                                    @include text($color-gray-3, $fs-1, $fw-1);
+                                    @include text($color-gray-3, $fs-0 + 2, $fw-1);
                                 }
                                 .detail {
-                                    @include text($color-red-primary, $fs-1, $fw-1);
+                                    @include text($color-red-primary, $fs-0 + 2, $fw-2);
                                 }
                             }
                         }
@@ -81,7 +89,7 @@
         }
         .cinema__movie {
             flex: 7;
-            max-height: 506px;
+            height: 700px;
             border: 1px solid $color-white-1;
             overflow-y: auto;
             .movie__item {
@@ -95,16 +103,16 @@
                     }
                     .movie__info {
                         .info__title {
-                            @include text($color-black-0, $fs-0, $fw-3);
+                            @include text($color-black-0, $fs-1, $fw-2);
                         }
                         .info_statistic {
-                            @include text($color-gray-primary, $fs-0, $fw-0);
+                            @include text($color-gray-primary, $fs-0 + 2, $fw-1);
                         }
                     }
                 }
                 .movie__item-bot {
                     h1 {
-                        @include text($color-black-0, $fs-1, $fw-2);
+                        @include text($color-black-0, $fs-1 + 1, $fw-2);
                     }
                     .show-time__list {
                         display: flex;
@@ -116,10 +124,10 @@
                             padding: $pd-1;
                             margin: 0 $mg-1 $mg-1 0;
                             .time-from {
-                                @include text($color-green-2, $fs-1, $fw-2);
+                                @include text($color-green-2, $fs-1 + 3, $fw-2);
                             }
                             .time-to {
-                                @include text($color-gray-primary, $fs-0, $fw-2);
+                                @include text($color-gray-primary, $fs-1, $fw-2);
                             }
                             &:hover {
                                 .time-from {

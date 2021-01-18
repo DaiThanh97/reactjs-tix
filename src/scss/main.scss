@@ -13,9 +13,15 @@
 
 @import './layout/navbar';
 @import './layout/cinema';
+@import './layout/footer';
+@import './layout/loading';
 
 @import './component/back-news';
 @import './component/button';
 
 @import './page/Home/carousel';
 @import './page/Home/movie';
+@import './page/Home/review';
+@import './page/Home/app-platform';
+@import './page/LogIn/login';
+@import './page/Register/register';
