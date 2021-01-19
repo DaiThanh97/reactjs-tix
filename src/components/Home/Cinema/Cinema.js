@@ -72,7 +72,7 @@ export default function Cinema() {
 
     const generateListCinema = () => {
         return listCinema.map((cinema, index) => {
-            return <li className="nav-item">
+            return <li className="nav-item" key={index}>
                 <a className={`nav-link ${(index === 0 ? 'active' : '')}`} data-toggle="tab">
                     <img src={cinema.image} />
                 </a>

@@ -22,7 +22,7 @@ function App() {
     return (
         <Fragment>
             <BrowserRouter>
-                <Loading />
+                {/* <Loading /> */}
                 <Switch>
                     {generateRoutes()}
                     {generateRoutesLogin()}

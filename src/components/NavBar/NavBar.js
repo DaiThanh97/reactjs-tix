@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, memo } from 'react';
 import { Link } from 'react-scroll';
 
-export default function NavBar(props) {
+function NavBar(props) {
     const menu = [
         {
             name: 'Lịch Chiếu',
@@ -46,7 +46,7 @@ export default function NavBar(props) {
                 <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul className="navbar-nav nav__mid">
                         <li className="d-block d-md-none nav__user">
-                            <a className="user__login border-0" href="#">
+                            <a className="user__login border-0" href="/">
                                 <img className="avatar mr-2" src="./img/common/avatar.png" />
                                 <span>
                                     Đăng Nhập
@@ -56,7 +56,7 @@ export default function NavBar(props) {
                         {generateMenu()}
                     </ul>
                     <div className="d-none d-md-flex nav__user">
-                        <a className="user__login pr-2 mr-2" href="#">
+                        <a className="user__login pr-2 mr-2" href="/detail">
                             <img className="avatar mr-2" src="./img/common/avatar.png" />
                             <span>
                                 Đăng Nhập
@@ -84,3 +84,5 @@ export default function NavBar(props) {
         </header>
     );
 }
+
+export default memo(NavBar);

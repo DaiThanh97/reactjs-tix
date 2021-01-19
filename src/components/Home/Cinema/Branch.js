@@ -40,8 +40,8 @@ export default function Branch(props) {
                     </div>
                 </div>
             </a>
-            <div id="collapseOne" class="collapse" data-parent="#accordion">
-                <div class="card-body cinema__movie">
+            <div id="collapseOne" className="collapse" data-parent="#accordion">
+                <div className="card-body cinema__movie">
                     {generateListMovieInfo()}
                 </div>
             </div>

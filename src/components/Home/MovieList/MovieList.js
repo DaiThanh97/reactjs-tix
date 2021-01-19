@@ -80,7 +80,7 @@ export default function MovieList(props) {
 
     const generateMovie = () => {
         return listSilde.map((movie, index) => {
-            return <div>
+            return <div key={index}>
                 <MovieItem movie={movie} />
             </div>
         });

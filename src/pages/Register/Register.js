@@ -6,7 +6,7 @@ export default function Register() {
             <div className="register-wrapper text-center">
                 <div className="btn-close">
                     <a href="/" className="btn-login-close">
-                        <i class="fas fa-times"></i>
+                        <i className="fas fa-times"></i>
                     </a>
                 </div>
                 <a href="/">

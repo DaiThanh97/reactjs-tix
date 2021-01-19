@@ -6,7 +6,7 @@ export default function LogIn() {
             <div className="login-wrapper text-center">
                 <div className="btn-close">
                     <a href="/" className="btn-login-close">
-                        <i class="fas fa-times"></i>
+                        <i className="fas fa-times"></i>
                     </a>
                 </div>
                 <a href="/">
@@ -32,10 +32,10 @@ export default function LogIn() {
                         <i className="fab fa-facebook-f"></i>
                     </button>
                     <button className="btn btn-login-google mx-3">
-                        <i class="fab fa-google-plus-g"></i>
+                        <i className="fab fa-google-plus-g"></i>
                     </button>
                     <button className="btn btn-login-twitter">
-                        <i class="fab fa-twitter"></i>
+                        <i className="fab fa-twitter"></i>
                     </button>
                 </div>
                 <span>

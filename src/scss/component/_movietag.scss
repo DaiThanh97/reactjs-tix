@@ -1,0 +1,15 @@
+.movie__tag-green {
+    @include movie-tag ($fs-1, $color-green-primary, $pd-0 - 3, $pd-2 - 3);
+}
+
+.movie__tag-red {
+    @include movie-tag ($fs-1, $color-red-primary, $pd-0 - 2, $pd-0);
+}
+
+.movie__tag-red-sm {
+    @include movie-tag ($fs-0 - 2, $color-red-primary, $pd-0 - 2, $pd-0);
+}
+
+.movie__tag-green-sm {
+    @include movie-tag ($fs-0 - 2, $color-green-primary, $pd-0 - 2, $pd-1);
+}

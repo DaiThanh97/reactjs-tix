@@ -20,7 +20,7 @@ export default function MovieInfo(props) {
 
     const generateShowTime = () => {
         return listShowTime.map((info, index) => {
-            return <a href className="show-time__item">
+            return <a href="/" className="show-time__item" key={index}>
                 <span className="time-from">{info.from}</span>
                 <span className="time-to"> ~ {info.to}</span>
             </a>

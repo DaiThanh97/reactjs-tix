@@ -12,11 +12,11 @@ export default function MovieItem(props) {
                 <div className="movie__rating text-center">
                     <span>{movie.rate}</span>
                     <div className="rate__star">
-                        <img src="./img/common/star1.png" alt />
-                        <img src="./img/common/star1.png" alt />
-                        <img src="./img/common/star1.png" alt />
-                        <img src="./img/common/star1.png" alt />
-                        <img src="./img/common/star1.2.png" alt />
+                        <img src="./img/common/star1.png" alt="" />
+                        <img src="./img/common/star1.png" alt="" />
+                        <img src="./img/common/star1.png" alt="" />
+                        <img src="./img/common/star1.png" alt="" />
+                        <img src="./img/common/star1.2.png" alt="" />
                     </div>
                 </div>
                 <div className="info__overlay">

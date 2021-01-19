@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-export default function Footer() {
+function Footer() {
     return (
         <footer>
             <div className="container pt-4 pb-3">
@@ -24,38 +24,38 @@ export default function Footer() {
                         <div className="partner-content">
                             <p className="title-header">ĐỐI TÁC</p>
                             <div className="partner-content__icon">
-                                <a href><img src="./img/coop/cgv.png" /></a>
-                                <a href><img src="./img/coop/bhd.png" /></a>
-                                <a href><img src="./img/coop/galaxycine.png" /></a>
-                                <a href><img src="./img/coop/cinestar.png" /></a>
-                                <a href><img src="./img/coop/lotte.png" /></a>
-                                <a href><img src="./img/coop/megags.png" /></a>
-                                <a href><img src="./img/coop/bt.jpg" /></a>
-                                <a href><img src="./img/coop/dcine.png" /></a>
-                                <a href><img src="./img/coop/TOUCH.png" /></a>
-                                <a href><img src="./img/coop/cnx.jpg" /></a>
-                                <a href><img src="./img/coop/STARLIGHT.png" /></a>
-                                <a href><img src="./img/coop/dcine.png" /></a>
-                                <a href><img src="./img/coop/zalopay_icon.png" /></a>
-                                <a href><img src="./img/coop/payoo.jpg" /></a>
-                                <a href><img src="./img/coop/VCB.png" /></a>
-                                <a href><img src="./img/coop/AGRIBANK.png" /></a>
-                                <a href><img src="./img/coop/VIETTINBANK.png" /></a>
-                                <a href><img src="./img/coop/IVB.png" /></a>
-                                <a href><img src="./img/coop/123go.png" /></a>
-                                <a href><img src="./img/coop/laban.png" /></a>
+                                <a href="/"><img src="./img/coop/cgv.png" /></a>
+                                <a href="/"><img src="./img/coop/bhd.png" /></a>
+                                <a href="/"><img src="./img/coop/galaxycine.png" /></a>
+                                <a href="/"><img src="./img/coop/cinestar.png" /></a>
+                                <a href="/"><img src="./img/coop/lotte.png" /></a>
+                                <a href="/"><img src="./img/coop/megags.png" /></a>
+                                <a href="/"><img src="./img/coop/bt.jpg" /></a>
+                                <a href="/"><img src="./img/coop/dcine.png" /></a>
+                                <a href="/"><img src="./img/coop/TOUCH.png" /></a>
+                                <a href="/"><img src="./img/coop/cnx.jpg" /></a>
+                                <a href="/"><img src="./img/coop/STARLIGHT.png" /></a>
+                                <a href="/"><img src="./img/coop/dcine.png" /></a>
+                                <a href="/"><img src="./img/coop/zalopay_icon.png" /></a>
+                                <a href="/"><img src="./img/coop/payoo.jpg" /></a>
+                                <a href="/"><img src="./img/coop/VCB.png" /></a>
+                                <a href="/"><img src="./img/coop/AGRIBANK.png" /></a>
+                                <a href="/"><img src="./img/coop/VIETTINBANK.png" /></a>
+                                <a href="/"><img src="./img/coop/IVB.png" /></a>
+                                <a href="/"><img src="./img/coop/123go.png" /></a>
+                                <a href="/"><img src="./img/coop/laban.png" /></a>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-2 text-center mt-5 mt-md-0">
                         <p className="title-header">MOBILE APP</p>
-                        <a href><img src="./img/common/apple-logo.png" className="icon-app" /></a>
-                        <a href><img src="./img/common/android-logo.png" className="icon-app" /></a>
+                        <a href="/"><img src="./img/common/apple-logo.png" className="icon-app" /></a>
+                        <a href="/"><img src="./img/common/android-logo.png" className="icon-app" /></a>
                     </div>
                     <div className="col-md-2 text-center mt-5 mt-md-0">
                         <p className="title-header">SOCIAL</p>
-                        <a href><img src="./img/common/facebook-logo.png" className="icon-app" /></a>
-                        <a href><img src="./img/common/zalo-logo.png" className="icon-app" /></a>
+                        <a href="/"><img src="./img/common/facebook-logo.png" className="icon-app" /></a>
+                        <a href="/"><img src="./img/common/zalo-logo.png" className="icon-app" /></a>
                     </div>
                 </div>
                 <div className="line my-4" />
@@ -74,7 +74,7 @@ export default function Footer() {
                         <p className="mb-1">
                             Số Điện Thoại (Hotline): 1900 545 436
           <br />
-          Email: <a href className="support">support@tix.vn</a>
+          Email: <a href="/" className="support">support@tix.vn</a>
                         </p>
                     </div>
                     <div className="col-md-2 mt-2 mt-md-0">
@@ -86,3 +86,5 @@ export default function Footer() {
 
     )
 }
+
+export default memo(Footer);
