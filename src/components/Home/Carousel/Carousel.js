@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import Slider from "react-slick";
-import ChoseTicket from '../ChoseTicket/ChoseTicket';
+import './Carousel.scss';
 
 export default function Carousel(props) {
 
@@ -36,7 +36,7 @@ export default function Carousel(props) {
                 <a className="venobox" data-vbtype="video" href={slide.trailer}>
                     <img src="./img/common/play-video.png" className="btn-play" />
                 </a>
-                <div class="carousel__overlay"></div>
+                <div className="carousel__overlay"></div>
             </div>
         });
     }
@@ -46,7 +46,6 @@ export default function Carousel(props) {
             <Slider {...settings.current}>
                 {generateSlide()}
             </Slider>
-            <ChoseTicket />
         </section>
     )
 }

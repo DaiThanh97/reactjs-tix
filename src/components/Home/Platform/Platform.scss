@@ -1,0 +1,36 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+#app-platform {
+    background: url('/assets/img/backapp.jpg');
+    background-size: contain;
+    .app-platform__content {
+        padding: 150px 0 80px;
+        .app-platform__detail {
+            h1 {
+                @include text($color-white-0, $fs-4 + 2, $fw-2);
+            }
+            p {
+                @include text($color-white-0, $fs-1 + 1, $fw-1);
+            }
+            a {
+                @include text($color-white-0, $fs-1, $fw-1);
+                text-decoration: underline;
+            }
+        }
+        .app-platform__img {
+            padding: 0 26.5%;
+        }
+        .app-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 2% 29.5%;
+            .slick-list {
+                border-radius: 20px;
+            }
+        }
+    }
+}

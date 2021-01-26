@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import Slider from "react-slick";
-import MovieItem from './MovieItem';
+import MovieItem from '../MovieItem/MovieItem';
+import './MovieList.scss';
 
 export default function MovieList(props) {
 

@@ -1,6 +1,6 @@
 .slick-prev, .slick-next {
     z-index: 5;
-    background-image: url(./assets/img/back-session.png);
+    background-image: url('/assets/img/back-session.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
@@ -12,7 +12,7 @@
 }
 .slick-next {
     left: unset;
-    background-image: url(./assets/img/next-session.png);
+    background-image: url('/assets/img/next-session.png');
 }
 
 #carousel {

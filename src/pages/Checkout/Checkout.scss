@@ -1,0 +1,17 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+#checkout {
+    .bg-film {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        height: 100%;
+        width: 4%;
+        background-image: url('/assets/img/tho-san-quai-vat.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: brightness(30%);
+    }
+}

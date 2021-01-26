@@ -1,0 +1,11 @@
+@import 'helper/variable.scss';
+@import 'helper/mixin.scss';
+
+@import 'base/reset';
+@import 'base/normailize';
+
+@import 'vendor/slick/slick';
+
+@import 'component/back-news';
+@import 'component/button';
+@import 'component/movietag';

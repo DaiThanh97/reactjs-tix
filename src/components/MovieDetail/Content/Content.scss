@@ -1,0 +1,92 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+.detail {
+    .trailer {
+        padding-left: $pd-1;
+        display: flex;
+        align-items: center;
+        .trailer__content {
+            position: relative;
+            &:hover {
+                .trailer__content-video {
+                    opacity: 1;
+                }
+            }
+            .trailer__content-image {
+                border-radius: 6px;
+            }
+            .trailer__content-video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.3s;
+            }
+        }
+        .trailer__description {
+            margin-left: $mg-3;
+            .description__date {
+                @include text($color-gray-1, $fs-1, $fw-2);
+            }
+            &-title {
+                @include text($color-gray-1, $fs-3, $fw-2);
+            }
+            &-time {
+                @include text($color-gray-1, $fs-1, $fw-1);
+            }
+        }
+    }
+    .rate {
+        padding-right: $pd-1;
+        text-align: center;
+        .rate-percent {
+            width: 126px;
+            height: 126px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,.4);
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .circle-border {
+                width: 111px;
+                height: 111px;
+                border-radius: 50%;
+                border: 7.5px solid #3a3a3a;
+                position: absolute;
+                top: 0;
+                left: 0;
+                box-sizing: content-box;
+            }
+            .point-group {
+                width: 126px;
+                height: 126px;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                .point-bar {
+                    clip-path: polygon(50% 0%, 100% 0px, 100% 100%, 0px 100%, 0px 0px, 0px 37.5676%, 50% 50%);
+                    width: 111px;
+                    height: 111px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border: 8px solid $color-green-3;
+                    box-sizing: content-box;
+                }
+            }
+            .point {
+                @include text($color-white-0, $fs-4 + 20px, $fw-1);
+            }
+        }
+        .txt-rate {
+            @include text($color-gray-1, $fs-1, $fw-2);
+        }
+    }
+}

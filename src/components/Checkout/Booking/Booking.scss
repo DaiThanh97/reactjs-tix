@@ -1,0 +1,97 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+.booking {
+    padding-top: $pd-4 + 5;
+    margin: 80px 18% 0 4%;
+    .booking-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .cinema-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img {
+                width: 44px;
+            }
+            .cinema-content {
+                p {
+                    @include text($color-black-0, $fs-1 + 1, $fw-1);
+                    .cinema-brand {
+                        @include text($color-green-1, $fs-1 + 1, $fw-1);
+                    }
+                }
+                .start-time {
+                    @include text($color-gray-primary, $fs-1 - 1, $fw-1);
+                }
+            }
+        }
+        .countdown {
+            text-align: center;
+            span {
+                @include text($color-gray-primary, $fs-0, $fw-1);
+            }
+            h3 {
+                @include text($color-red-primary, $fs-4, $fw-2);
+            }
+        }
+    }
+    .seat-map {
+        margin-top: $mg-1;
+        .screen {
+            text-align: center;
+        }
+        .seat-list {
+            display: grid;
+            grid-template-columns: repeat(19, 1fr);
+            column-gap: 5px;
+            width: 75%;
+            margin: auto;
+            place-items: center;
+            .seat {
+                width: 30px;
+                height: 30px;
+                background-color: #3e515d;
+                border-radius: 6px;
+                .seat__number {
+                    @include text($color-black-0, $fs-1, $fw-1);
+                    opacity: 0;
+                }
+            }
+            .seat-blank {
+                min-width: 30px;
+                background-color: transparent;
+            }
+        }
+    }
+    .notation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .notation-item {
+            margin: 0 $mg-3;
+            .notation-seat {
+                width: 15px;
+                height: 15px;
+                border-radius: 3px;
+                margin: auto;
+                &.vip {
+                    background-color: #f7b500;
+                }
+                &.normal {
+                    background-color: #3e515d;
+                }
+                &.select {
+                    background-color: $color-green-4;
+                }
+                &.block {
+                    background-color: $color-gray-primary;
+                }
+            }
+            p {
+                @include text($color-gray-primary, $fs-0 + 2, $fw-1);
+            }
+        }
+    }
+}

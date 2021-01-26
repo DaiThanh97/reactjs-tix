@@ -1,0 +1,101 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+#movie__info {
+    position: relative;
+    margin: $mg-4 0;
+    padding: 0 $pd-1;
+    cursor: pointer;
+    .movie__img {
+        height: 318px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 6px;
+        position: relative;
+        .icon__play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.2s;
+            img {
+                width: $w-50;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .movie__rating {
+            position: absolute;
+            top: 15px;
+            right: 12px;
+            background-color: #0c1b36cc;
+            border: 1px solid #1f2e46;
+            width: 54px;
+            height: 38px;
+            border-radius: 4px;
+            span {
+                @include text ($color-white-0, $fs-1 + 2, $fw-2);
+            }
+            img {
+                width: 8px;
+            }
+            .rate__star {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .movie__tag-green, .movie__tag-red {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+        }
+    }
+    .movie__name {
+        transition: all 0.2s;
+        h2 {
+            @include text ($color-black-0, $fs-1, $fw-3);
+            line-height: 22px;
+        }
+        .movie__time {
+            font-size: $fs-1 - 2;
+        }
+    }
+    .info__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, $color-black-0,transparent 100%);
+        opacity: 0;
+        transition: all 0.3s;
+        border-radius: 6px;
+        .btn-buy-ticket {
+            position: absolute;
+            top: 102%;
+        }
+    }
+    &:hover {
+        .icon__play {
+            opacity: 1;
+        }
+        .movie__name {
+            opacity: 0;
+        }
+        .info__overlay {
+            opacity: 1;
+        }
+    }
+    @include respond-to('md') {
+        .movie__img {
+            background-size: 100% 100%;
+        }
+        .movie__name {
+            display: none;
+        }
+    }
+}

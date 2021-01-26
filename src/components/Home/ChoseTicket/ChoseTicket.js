@@ -1,9 +1,10 @@
 import React from 'react'
+import './ChoseTicket.scss'
 
 export default function ChoseTicket(props) {
     return (
-        <div className="d-none d-lg-block container buy-ticket">
-            <div className="buy-ticket__content py-2">
+        <div id="chose-ticket" className="d-none d-lg-block container">
+            <div className="chose-ticket__content py-2">
                 <div className="dropdown film">
                     <button className="dropdown-toggle" data-toggle="dropdown">
                         <span>Phim</span>

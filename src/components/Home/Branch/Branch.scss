@@ -1,0 +1,26 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+.cinema__stage-item {
+    display: flex;
+    padding: $pd-3 $pd-2 $pd-2 $pd-3;
+    text-decoration: none;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+    .stage__info {
+        .stage__brand-bhd {
+            @include text($color-green-1, $fs-1, $fw-1);
+            .axx {
+                @include text($color-black-0, $fs-1, $fw-1);
+            }
+        }
+        .stage__location {
+            @include text($color-gray-3, $fs-0 + 2, $fw-1);
+        }
+        .detail {
+            @include text($color-red-primary, $fs-0 + 2, $fw-2);
+        }
+    }
+}

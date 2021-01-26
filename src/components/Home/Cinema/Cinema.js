@@ -1,6 +1,7 @@
 import React from 'react'
-import Branch from './Branch';
-import MovieInfo from './MovieInfo';
+import Branch from '../Branch/Branch';
+import MovieInfo from '../MovieInfo/MovieInfo';
+import './Cinema.scss';
 
 export default function Cinema() {
 
@@ -115,6 +116,5 @@ export default function Cinema() {
                 </div>
             </div>
         </section>
-
     )
 }

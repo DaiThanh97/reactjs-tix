@@ -1,22 +1,24 @@
-import { ROUTES, ROUTES_LOGIN } from './configs/routes';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ROUTES_MAIN, ROUTES_SUB } from './configs/routes';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import { Fragment } from 'react';
-import { Main, LogIn } from './templates/main'
-import './App.css';
-import Loading from './components/Loading/Loading';
+import './App.scss';
+// import Loading from './components/Loading/Loading';
+import { Main, Sub } from './HOC';
 
 function App() {
 
     const generateRoutes = () => {
-        return ROUTES.map((route, index) => {
+        let listRoute = [];
+        const main = ROUTES_MAIN.map((route, index) => {
             return <Main {...route} key={index} />
-        })
-    }
+        });
 
-    const generateRoutesLogin = () => {
-        return ROUTES_LOGIN.map((route, index) => {
-            return <LogIn {...route} key={index} />
-        })
+        const sub = ROUTES_SUB.map((route, index) => {
+            return <Sub {...route} key={index} />
+        });
+
+        listRoute.push([main, sub]);
+        return listRoute;
     }
 
     return (
@@ -25,7 +27,6 @@ function App() {
                 {/* <Loading /> */}
                 <Switch>
                     {generateRoutes()}
-                    {generateRoutesLogin()}
                 </Switch>
             </BrowserRouter>
         </Fragment>

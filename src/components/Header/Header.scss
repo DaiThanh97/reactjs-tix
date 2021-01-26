@@ -1,0 +1,90 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 0 $fs-1 rgba($color: $color-black-0, $alpha: 0.3);
+    background-color: $color-white-0;
+    .nav__logo {
+        width: $w-50;
+    }
+    .nav__mid {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .nav-item {
+            margin-left: $mg-0;
+            .nav-link {
+                @include text($color-black-0, $fs-1, $fw-1);
+                transition: all 0.3s;
+                &:hover {
+                    color: $color-red-primary;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .nav__user {
+        display: flex;
+        align-items: center;
+        .user__login {
+            text-decoration: none;
+            border-right: 1px solid $color-gray-1;
+            .avatar {
+                width: 30px;
+                border-radius: 50%;
+            }
+            span {
+                @include text($color-gray-primary, $fs-1, $fw-1);
+            }
+        }
+        .user__location {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            @include text($color-gray-primary, $fs-1, $fw-1);
+            .state {
+                border: none;
+                outline: none;
+                width: $w-100 + 20;
+                background: transparent;
+                text-align: left;
+                cursor: pointer;
+                @include text($color-gray-primary, $fs-1, $fw-1);
+                option {
+                    @include text($color-black-0, $fs-1, $fw-1);
+                    margin: $pd-3;
+                }
+            }
+            .state-menu {
+                top: 190%;
+                min-width: $w-50;
+                max-height: 300px;
+                overflow: auto;
+                a {
+                    transition: all 0.3s;
+                    &:hover {
+                        background-color: $color-blue-0;
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+    }
+    @include respond-to('md') {
+        .nav__mid {
+            display: none;
+        }
+    }
+    @include respond-to('sm') {
+        .nav__mid {
+            display: block;
+            position: unset;
+            transform: translateX(0);
+        }
+    }
+}

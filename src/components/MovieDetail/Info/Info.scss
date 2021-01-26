@@ -1,0 +1,14 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+.movie-info {
+    .left {
+        @include text($color-white-0, $fs-1 - 1, $fw-3);
+    }
+    h6 {
+        @extend .left;
+    }
+    .description {
+        @include text($color-gray-1, $fs-1 - 1, $fw-1);
+    }
+}

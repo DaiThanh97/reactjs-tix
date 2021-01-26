@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Slider from "react-slick";
+import './Platform.scss';
 
 export default function Platform() {
 

@@ -1,0 +1,50 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+#login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/bglogin.jpg');
+    background-position: center;
+    background-size: contain;
+    .login-wrapper {
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 35px 30px;
+        background-image: linear-gradient(to bottom,rgba(20,50,93,.9),rgba(8,22,48,.9));
+        @include text($color-white-0, $fs-1 - 1, $fw-0);
+        border-radius: 6px;
+    }
+    .login-title {
+        width: 209px;
+        margin-bottom: $mg-4;
+    }
+    .btn-login {
+        width: 100%;
+    }
+    .forgot-password {
+        text-decoration: none;
+        @include text($color-blue-1, $fs-1, $fw-2);
+        transition: all 0.3s;
+        &:hover {
+            color: #174280;
+        }
+    }
+    .register-now {
+        @extend .forgot-password;
+    }
+    
+    @include respond-to('sm') {
+        .login-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+        .btn-close {
+            transform: initial;
+        }
+    }
+}

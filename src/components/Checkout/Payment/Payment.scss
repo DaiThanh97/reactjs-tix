@@ -1,0 +1,37 @@
+@import 'helper/variable.scss';
+@import 'helper/mixin.scss';
+
+.payment-scope {
+    position: fixed;
+    width: 18%;
+    height: 100%;
+    top:0;
+    right: 0;
+    box-shadow: 0px 0px 10px 1px rgba($color: $color-black-0, $alpha: 0.3);
+    padding: 0 $pd-2;
+    .amount {
+        text-align: center;
+        border-bottom: 1px dashed rgba($color: $color-gray-3, $alpha: 0.3);
+        padding: 17px 0;
+        @include text($color-green-4, $fs-4 + 4, $fw-2);
+    }
+    .info {
+        h2 {
+            @include text($color-black-0, $fs-1 + 1, $fw-2);
+        }
+        p {
+            margin-bottom: 0px;
+            @include text($color-black-0, $fs-1 - 1, $fw-1);
+        }
+        border-bottom: 1px dashed rgba($color: $color-gray-3, $alpha: 0.3);
+    }
+    .seat-statis {
+        border-bottom: 1px dashed rgba($color: $color-gray-3, $alpha: 0.3);
+        .seats {
+            @include text($color-red-primary, $fs-1, $fw-1);
+        }
+        .seat-total {
+            @include text($color-green-4, $fs-1 + 1, $fw-2);
+        }
+    }
+}

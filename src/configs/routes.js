@@ -1,9 +1,10 @@
+import Checkout from "../pages/Checkout/Checkout";
 import Home from "../pages/Home/Home";
 import LogIn from "../pages/LogIn/LogIn";
 import MovieDetail from "../pages/MovieDetail/MovieDetail";
 import Register from "../pages/Register/Register";
 
-export const ROUTES = [
+export const ROUTES_MAIN = [
     {
         path: '/',
         exact: true,
@@ -16,7 +17,7 @@ export const ROUTES = [
     },
 ]
 
-export const ROUTES_LOGIN = [
+export const ROUTES_SUB = [
     {
         path: '/login',
         exact: true,
@@ -26,5 +27,10 @@ export const ROUTES_LOGIN = [
         path: '/register',
         exact: true,
         component: Register
+    },
+    {
+        path: '/checkout/(:id)?',
+        exact: true,
+        component: Checkout
     },
 ]

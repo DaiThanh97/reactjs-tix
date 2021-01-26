@@ -1,0 +1,55 @@
+@import 'helper/variable';
+@import 'helper/mixin';
+
+#movie {
+    .movie__content {
+        .movie__nav {
+            border: none;
+            align-items: baseline;
+            justify-content: center;
+            .nav-item {
+                .nav-link {
+                    border: none;
+                    padding: $pd-1 $pd-2;
+                    @include text($color-black-0, $fs-2, $fw-1);
+                    transition: all 0.3s;
+                    &.active {
+                        cursor: context-menu;
+                        @include text($color-red-primary, $fs-2 + 5, $fw-1);
+                    }
+                    &:hover {
+                        font-size: $fs-3;
+                    }
+                }
+            }
+        }
+        .carousel-control-prev { 
+            width: 10%;
+            img {
+                width: $w-50;
+            }
+            left: -3%;
+        }
+        .carousel-control-next {
+            @extend .carousel-control-prev;
+            left: unset;
+            right: -3%;
+        }
+
+    }
+    @include respond-to('md') {
+        .movie__content {
+            padding-top: $pd-4;
+        }
+    }
+    @include respond-to('sm') {
+        .movie__content {
+            padding-top: $pd-4;
+        }
+    }
+    @include respond-to('xs') {
+        .movie__content {
+            padding-top: $pd-4;
+        }
+    }
+}
