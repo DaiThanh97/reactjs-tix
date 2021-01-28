@@ -30,38 +30,46 @@
         .countdown {
             text-align: center;
             span {
-                @include text($color-gray-primary, $fs-0, $fw-1);
+                @include text($color-gray-primary, $fs-0, $fw-2);
             }
             h3 {
                 @include text($color-red-primary, $fs-4, $fw-2);
             }
         }
     }
-    .seat-map {
-        margin-top: $mg-1;
-        .screen {
-            text-align: center;
-        }
-        .seat-list {
-            display: grid;
-            grid-template-columns: repeat(19, 1fr);
-            column-gap: 5px;
-            width: 75%;
-            margin: auto;
-            place-items: center;
-            .seat {
-                width: 30px;
-                height: 30px;
-                background-color: #3e515d;
-                border-radius: 6px;
-                .seat__number {
-                    @include text($color-black-0, $fs-1, $fw-1);
-                    opacity: 0;
-                }
+    .seat-section {
+        overflow-x: auto;
+        .seat-map {
+            .screen {
+                text-align: center;
             }
-            .seat-blank {
-                min-width: 30px;
-                background-color: transparent;
+            .seat-list {
+                // width: 200%;
+                .seat-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .seat-char {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                    }
+                    .seat {
+                        width: 30px;
+                        height: 30px;
+                        background-color: #3e515d;
+                        border-radius: 6px;
+                        margin: 0 2px;
+                        .seat__number {
+                            @include text($color-black-0, $fs-1, $fw-1);
+                            opacity: 0;
+                        }
+                    }
+                    .seat-blank {
+                        min-width: 30px;
+                        background-color: transparent;
+                    }
+                }
             }
         }
     }
@@ -76,6 +84,7 @@
                 height: 15px;
                 border-radius: 3px;
                 margin: auto;
+                margin-bottom: $mg-0;
                 &.vip {
                     background-color: #f7b500;
                 }
@@ -91,6 +100,34 @@
             }
             p {
                 @include text($color-gray-primary, $fs-0 + 2, $fw-1);
+            }
+        }
+    }
+
+    .bottom-control {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        div {
+            border-top: 1px solid $color-gray-4;
+            text-align: center;
+            .seat-string {
+                line-height: 50px;
+                @include text($color-green-4, $fs-1, $fw-2);
+            }
+        }
+    }
+
+    @include respond-to('sm') {
+        margin: 0;
+        margin-top: 80px;
+        .seat-section {
+            .seat-map {
+                width: 150%;
             }
         }
     }

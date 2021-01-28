@@ -1,47 +1,33 @@
 import React from 'react'
 import './MovieInfo.scss';
+import { formatShowTime, formatShowEndTime } from './../../../utils/date';
 
 export default function MovieInfo(props) {
     const { info } = props;
 
-    const listShowTime = [
-        {
-            from: '22:30',
-            to: '00:10'
-        },
-        {
-            from: '22:30',
-            to: '00:10'
-        },
-        {
-            from: '22:30',
-            to: '00:10'
-        },
-    ];
-
-    const generateShowTime = () => {
-        return listShowTime.map((info, index) => {
-            return <a href="/" className="show-time__item" key={index}>
-                <span className="time-from">{info.from}</span>
-                <span className="time-to"> ~ {info.to}</span>
-            </a>
+    const generateShowTime = (lstLichChieuTheoPhim) => {
+        return lstLichChieuTheoPhim.map((item, index) => {
+            return <button className="show-time__item" key={index}>
+                <span className="time-from">{formatShowTime(item.ngayChieuGioChieu)}</span>
+                <span className="time-to"> ~ {formatShowEndTime(item.ngayChieuGioChieu)}</span>
+            </button>
         })
     }
 
     return (
         <div className="movie__item">
             <div className="movie__item-top">
-                <img src={info.image} className="img-fluid mr-3" />
+                <img src={info.hinhAnh} className="img-fluid mr-3" />
                 <div className="movie__info">
                     <span className="movie__tag-red-sm">C18</span>
-                    <span className="info__title">{info.name}</span>
-                    <p className="info_statistic mb-0 mt-1">{info.statistic}</p>
+                    <span className="info__title">{info.tenPhim}</span>
+                    <p className="info_statistic mb-0 mt-1">120 phút - TIX 7.7 - IMDb 0</p>
                 </div>
             </div>
             <div className="movie__item-bot mt-3">
                 <h1>2D Digital</h1>
                 <div className="show-time__list mt-3">
-                    {generateShowTime()}
+                    {generateShowTime(info.lstLichChieuTheoPhim)}
                 </div>
             </div>
         </div>

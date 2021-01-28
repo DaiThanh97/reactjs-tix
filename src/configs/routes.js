@@ -1,8 +1,9 @@
-import Checkout from "../pages/Checkout/Checkout";
-import Home from "../pages/Home/Home";
-import LogIn from "../pages/LogIn/LogIn";
-import MovieDetail from "../pages/MovieDetail/MovieDetail";
-import Register from "../pages/Register/Register";
+import React from 'react';
+const Home = React.lazy(() => import("../pages/Home/Home"));
+const LogIn = React.lazy(() => import("../pages/LogIn/LogIn"));
+const Register = React.lazy(() => import("../pages/Register/Register"));
+const MovieDetail = React.lazy(() => import("../pages/MovieDetail/MovieDetail"));
+const Checkout = React.lazy(() => import("../pages/Checkout/Checkout"));
 
 export const ROUTES_MAIN = [
     {

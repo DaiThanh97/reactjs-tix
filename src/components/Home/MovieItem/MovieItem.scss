@@ -3,8 +3,9 @@
 
 #movie__info {
     position: relative;
-    margin: $mg-4 0;
+    margin: $mg-3 0;
     padding: 0 $pd-1;
+    width: 100%;
     cursor: pointer;
     .movie__img {
         height: 318px;
@@ -57,8 +58,9 @@
     .movie__name {
         transition: all 0.2s;
         h2 {
-            @include text ($color-black-0, $fs-1, $fw-3);
+            @include text ($color-black-0, $fs-1 + 1, $fw-3);
             line-height: 22px;
+            height: 38px;
         }
         .movie__time {
             font-size: $fs-1 - 2;

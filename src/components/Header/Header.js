@@ -73,9 +73,9 @@ function Header(props) {
                                     Hồ Chí Minh
                                 </button>
                                 <div className="dropdown-menu state-menu">
-                                    <a className="dropdown-item" href="#">Hà Nội</a>
+                                    {/* <a className="dropdown-item" href="#">Hà Nội</a>
                                     <a className="dropdown-item" href="#">Đà Nẵng</a>
-                                    <a className="dropdown-item" href="#">Đồng Nai</a>
+                                    <a className="dropdown-item" href="#">Đồng Nai</a> */}
                                 </div>
                             </div>
                         </a>

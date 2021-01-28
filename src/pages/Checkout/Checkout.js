@@ -8,7 +8,7 @@ export default function Checkout() {
     return (
         <div id="checkout">
             <StepBar />
-            <div className="bg-film"></div>
+            <div className="bg-film d-none d-md-block"></div>
             <Booking />
             <Payment />
         </div>

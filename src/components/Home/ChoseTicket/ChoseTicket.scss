@@ -2,6 +2,8 @@
 @import 'helper/mixin';
 
 #chose-ticket {
+    position: relative;
+    z-index: 100;
     transform: translateY(-55%);
     .chose-ticket__content {
         display: flex;
@@ -32,10 +34,31 @@
                     color: $color-gray-primary;
                 }
             }
+            span {
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                text-align: left;
+                &.holder-film {
+                    width: 220px;
+                }
+            }
+            .dropdown-menu {
+                max-height: 300px;
+                overflow: auto;
+                a {
+                    @include text($color-black-0, $fs-1, $fw-1);
+                    transition: all 0.3s;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $color-blue-0;
+                        color: $color-white-0;
+                    }
+                }
+            }
         }
         .film {
             flex: 2;
-            
         }
         .cinema {
             flex: 1;

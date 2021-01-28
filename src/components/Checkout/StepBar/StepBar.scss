@@ -7,7 +7,7 @@
     justify-content: space-between;
     height: 80px;
     box-shadow: 0 13px 10px -10px rgba($color: $color-black-0, $alpha: 0.3);
-    padding: 0 60px 0 40px;
+    padding: 0 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,5 +43,27 @@
                 background-color: transparent;
             }
         }
+    }
+    .user-info {
+        .avatar {
+            width: 30px;
+            border-radius: 50%;
+        }
+        .user-info__name {
+            @include text($color-gray-primary, $fs-1 - 1, $fw-1);
+        }
+    }
+    @include respond-to('md') {
+        ul {
+            .step-item {
+                padding: 0px 20px;
+                @include text($color-black-0, $fs-1 - 1, $fw-2);
+            }
+        }
+    }
+    @include respond-to('sm') {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }

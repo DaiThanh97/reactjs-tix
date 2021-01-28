@@ -17,8 +17,9 @@
                         padding: $pd-3;
                         opacity: 0.5;
                         border: none;
-                        transition: all 0.3s;
+                        transition: all 0.2s;
                         &:hover {
+                            cursor: pointer;
                             opacity: 1;
                         }
                         &.active {
@@ -44,28 +45,9 @@
         .cinema__stage {
             flex: 3;
             height: 700px;
+            overflow: auto;
             border-top: 1px solid $color-white-1;
             border-bottom: 1px solid $color-white-1;
-            .cinema__stage-content {
-                .nav-item {
-                    .nav-link {
-                        padding: 0;
-                        opacity: 0.5;
-                        transition: all 0.3s;
-                        &:hover, &.active {
-                            opacity: 1;
-                        }
-                    }
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 90%;
-                        margin: auto;
-                        height: 1px;
-                        background-color: $color-white-1;
-                    }
-                }
-            }
         }
         .cinema__movie {
             flex: 7;

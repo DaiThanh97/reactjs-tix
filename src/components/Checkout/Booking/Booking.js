@@ -23,68 +23,71 @@ export default function Booking() {
                         <h3>00:00</h3>
                     </div>
                 </div>
-                <div className="seat-map">
-                    <div className="screen">
-                        <img src="/img/common/screen.png" className="img-fluid" />
-                    </div>
-                    <div className="seat-list">
-                        <div className="seat-char">
-                            A
+                <div className="mt-2 seat-section">
+                    <div className="seat-map">
+                        <div className="screen">
+                            <img src="/img/common/screen.png" className="w-100" />
                         </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
+                        <div className="seat-list">
+                            <div className="seat-row">
+                                <div className="seat-char">
+                                    A
+                            </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat-blank"></div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat-blank"></div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                                <div className="seat">
+                                    <span className="seat__number">123</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat-blank"></div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat-blank"></div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div className="seat">
-                            <span className="seat__number">123</span>
-                        </div>
-                        <div></div>
                     </div>
                 </div>
-                <div className="notation mt-5">
+                <div className="notation mt-5 text-center">
                     <div className="notation-item">
                         <div className="notation-seat vip"></div>
                         <p>Ghế VIP</p>
@@ -102,6 +105,14 @@ export default function Booking() {
                         <p>Ghế đã có người chọn</p>
                     </div>
                 </div>
+            </div>
+            <div className="bottom-control d-md-none">
+                <div className="w-50">
+                    <span className="seat-string">
+                        J12 ABV
+                    </span>
+                </div>
+                <button className="w-50 btn-continue">TIẾP TỤC</button>
             </div>
         </main>
     )

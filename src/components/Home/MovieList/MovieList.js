@@ -1,86 +1,52 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import Slider from "react-slick";
+import { GET_LIST_MOVIE_SAGA } from '../../../redux/constants/movie.constant';
 import MovieItem from '../MovieItem/MovieItem';
 import './MovieList.scss';
 
 export default function MovieList(props) {
+    const { listMovie } = useSelector(state => state.movieReducer);
+    const dispatch = useDispatch();
 
-    const listSilde = [
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-        {
-            rate: 8.5,
-            trailer: 'https://www.youtube.com/embed/Vgb1uUmpQNU',
-            image: './img/movies/tho-san-quai-vat.png',
-            name: 'Cục Nợ Hóa Cục Cưng - Pawn (P)',
-            time: 113,
-        },
-    ]
+    // Didmount
+    useEffect(() => {
+        // Dispatch to Saga
+        dispatch({ type: GET_LIST_MOVIE_SAGA });
+    }, []);
 
     const settings = useRef({
         infinite: true,
         slidesToShow: 1,
         speed: 500,
         rows: 2,
-        slidesPerRow: 4
+        slidesPerRow: 4,
+        responsive: [
+            {
+                breakpoint: 1200, // <= 1200 thì apply settings
+                settings: {
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesPerRow: 3,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesPerRow: 2,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     const generateMovie = () => {
-        return listSilde.map((movie, index) => {
+        return listMovie.map((movie, index) => {
             return <div key={index}>
                 <MovieItem movie={movie} />
             </div>

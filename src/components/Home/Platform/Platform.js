@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import Slider from "react-slick";
 import './Platform.scss';
 
-export default function Platform() {
+function Platform() {
 
     const settings = useRef({
         dots: false,
@@ -30,7 +30,7 @@ export default function Platform() {
                                     Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và đổi quà hấp dẫn.
             </p>
                                 <button className="btn-get-app mb-3">App miễn phí - Tải về ngay!</button>
-                                <p>TIX có hai phiên bản <a href>iOS</a> &amp; <a href>Android</a></p>
+                                <p>TIX có hai phiên bản <a href="/">iOS</a> &amp; <a href="/">Android</a></p>
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
@@ -51,3 +51,5 @@ export default function Platform() {
         </section>
     )
 }
+
+export default memo(Platform);

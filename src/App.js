@@ -1,11 +1,16 @@
 import { ROUTES_MAIN, ROUTES_SUB } from './configs/routes';
 import { BrowserRouter, Switch } from 'react-router-dom';
-import { Fragment } from 'react';
-import './App.scss';
-// import Loading from './components/Loading/Loading';
+import { Fragment, Suspense, useEffect } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
+import Loading from './components/Loading/Loading';
 import { Main, Sub } from './HOC';
+import './App.scss';
 
 function App() {
+
+    useEffect(() => {
+        scroll.scrollTo('carousel');
+    }, []);
 
     const generateRoutes = () => {
         let listRoute = [];
@@ -23,11 +28,13 @@ function App() {
 
     return (
         <Fragment>
+            <Loading />
             <BrowserRouter>
-                {/* <Loading /> */}
-                <Switch>
-                    {generateRoutes()}
-                </Switch>
+                <Suspense fallback={<div></div>}>
+                    <Switch>
+                        {generateRoutes()}
+                    </Switch>
+                </Suspense>
             </BrowserRouter>
         </Fragment>
     );
