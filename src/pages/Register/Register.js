@@ -11,7 +11,7 @@ export default function Register() {
                     </a>
                 </div>
                 <a href="/">
-                    <img src="./img/common/login-title.png" className="register-title" />
+                    <img src="./img/common/login-title.png" className="register-title" alt="" />
                 </a>
                 <form>
                     <div className="form-group text-left">

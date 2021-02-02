@@ -34,14 +34,14 @@ function Platform() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6">
-                            <img src="./img/platform/mobile.png" className="img-fluid app-platform__img" />
+                            <img src="./img/platform/mobile.png" className="img-fluid app-platform__img" alt="" />
                             <div className="app-carousel">
                                 <Slider {...settings.current} >
-                                    <img src="./img/platform/slide2.jpg" className="img-fluid" />
-                                    <img src="./img/platform/slide7.jpg" className="img-fluid" />
-                                    <img src="./img/platform/slide9.jpg" className="img-fluid" />
-                                    <img src="./img/platform/slide10.jpg" className="img-fluid" />
-                                    <img src="./img/platform/slide14.jpg" className="img-fluid" />
+                                    <img src="./img/platform/slide2.jpg" className="img-fluid" alt="" />
+                                    <img src="./img/platform/slide7.jpg" className="img-fluid" alt="" />
+                                    <img src="./img/platform/slide9.jpg" className="img-fluid" alt="" />
+                                    <img src="./img/platform/slide10.jpg" className="img-fluid" alt="" />
+                                    <img src="./img/platform/slide14.jpg" className="img-fluid" alt="" />
                                 </Slider>
                             </div>
                         </div>

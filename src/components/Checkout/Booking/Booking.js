@@ -7,7 +7,7 @@ export default function Booking() {
             <div className="container">
                 <div className="booking-info">
                     <div className="cinema-info">
-                        <img src="/img/cinema_mall/bhd.png" />
+                        <img src="/img/cinema_mall/bhd.png" alt="" />
                         <div className="cinema-content ml-3">
                             <p className="mb-0">
                                 <span className="cinema-brand">BHD Star</span>
@@ -26,7 +26,7 @@ export default function Booking() {
                 <div className="mt-2 seat-section">
                     <div className="seat-map">
                         <div className="screen">
-                            <img src="/img/common/screen.png" className="w-100" />
+                            <img src="/img/common/screen.png" className="w-100" alt="" />
                         </div>
                         <div className="seat-list">
                             <div className="seat-row">

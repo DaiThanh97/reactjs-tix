@@ -6,27 +6,27 @@ export default function ShowTime() {
         <div className="board-showtime">
             <ul className="mb-0 pr-2">
                 <li className="active">
-                    <img src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
+                    <img alt="" src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
                     <span>BHD Star Cineplex</span>
                 </li>
                 <li>
-                    <img src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
+                    <img alt="" src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
                     <span>BHD Star Cineplex</span>
                 </li>
                 <li>
-                    <img src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
+                    <img alt="" src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
                     <span>BHD Star Cineplex</span>
                 </li>
                 <li>
-                    <img src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
+                    <img alt="" src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
                     <span>BHD Star Cineplex</span>
                 </li>
                 <li>
-                    <img src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
+                    <img alt="" src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
                     <span>BHD Star Cineplex</span>
                 </li>
                 <li>
-                    <img src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
+                    <img alt="" src="./img/cinema_mall/bhd.png" style={{ width: 50 }} />
                     <span>BHD Star Cineplex</span>
                 </li>
             </ul>
@@ -84,7 +84,7 @@ export default function ShowTime() {
                 <div className="showtime__movie">
                     <div className="movie__item">
                         <div className="movie__item-top pb-3" data-toggle="collapse" data-target="#demo">
-                            <img src="./img/cinema_mall/bhd-star-bitexco-15379552241200.jpg" className="img-fluid mr-3" />
+                            <img alt="" src="./img/cinema_mall/bhd-star-bitexco-15379552241200.jpg" className="img-fluid mr-3" />
                             <div className="movie__info">
                                 <span className="info__title">BHD Star - Bitexco</span>
                                 <p className="info_statistic mb-0 mt-1">L3-Bitexco Icon 68, 2 Hải Triều, Q.1[Bản đồ]</p>

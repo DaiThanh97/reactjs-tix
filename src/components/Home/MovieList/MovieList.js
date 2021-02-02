@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Slider from "react-slick";
 import { GET_LIST_MOVIE_SAGA } from '../../../redux/constants/movie.constant';
 import MovieItem from '../MovieItem/MovieItem';
+import LazyLoad from 'react-lazyload';
 import './MovieList.scss';
 
 export default function MovieList(props) {
@@ -13,7 +14,7 @@ export default function MovieList(props) {
     useEffect(() => {
         // Dispatch to Saga
         dispatch({ type: GET_LIST_MOVIE_SAGA });
-    }, []);
+    }, [dispatch]);
 
     const settings = useRef({
         infinite: true,
@@ -47,9 +48,9 @@ export default function MovieList(props) {
 
     const generateMovie = () => {
         return listMovie.map((movie, index) => {
-            return <div key={index}>
+            return <LazyLoad key={index} height={400} offset={600}>
                 <MovieItem movie={movie} />
-            </div>
+            </LazyLoad>
         });
     }
 

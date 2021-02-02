@@ -32,9 +32,9 @@ export default function Carousel(props) {
     const generateSlide = () => {
         return listSilde.map((slide, index) => {
             return <div className="carousel__banner" key={index}>
-                <img src={slide.image} className="carousel__img" />
+                <img src={slide.image} className="carousel__img" alt="" />
                 <a className="venobox" data-vbtype="video" href={slide.trailer}>
-                    <img src="./img/common/play-video.png" className="btn-play" />
+                    <img src="./img/common/play-video.png" className="btn-play" alt="" />
                 </a>
                 <div className="carousel__overlay"></div>
             </div>

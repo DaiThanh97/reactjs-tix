@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { Fragment, useEffect, useRef } from 'react'
 import { formatShowTime, formatShowEndTime } from './../../../utils/date';
 import './Branch.scss';
 
 export default function Branch(props) {
     const { branch, handleBrand } = props;
+    let collapse = useRef(null);
+
+    useEffect(() => {
+        if (collapse) {
+            collapse.current.className = collapse.current.className.replace('show', '');
+        }
+    }, [branch]);
 
     const customBranch = (name) => {
         const arr = name.split('-');
@@ -28,10 +35,10 @@ export default function Branch(props) {
         }
 
         return danhSachPhim.map((item, index) => {
-            return <div id={`${branch.maCumRap}`} className="collapse d-initial d-md-none" key={index}>
+            return <Fragment key={index}>
                 <button className="movie__info" data-toggle="collapse" data-target={`#${branch.maCumRap + item.maPhim}`}>
                     <div className="info-wrapper">
-                        <img src={item.hinhAnh} className="img-fluid mr-2" />
+                        <img src={item.hinhAnh} className="img-fluid mr-2" alt="" />
                         <div className="content text-left">
                             <h6 className="mb-0">{item.tenPhim}</h6>
                             <span>120 phút</span>
@@ -46,7 +53,7 @@ export default function Branch(props) {
                         {generateCollapseShowTime(item.lstLichChieuTheoPhim)}
                     </div>
                 </div>
-            </div>
+            </Fragment>
         });
     }
 
@@ -54,12 +61,11 @@ export default function Branch(props) {
         <li id="accordion" className="nav-item" style={{ cursor: 'pointer' }} onClick={() => handleBrand(branch.maCumRap)}>
             <a
                 className={`nav-link ${branch.active}`}
-                onClick={() => handleBrand(branch.maCumRap)}
                 data-toggle="collapse"
                 href={`#${branch.maCumRap}`}
             >
                 <div className="cinema__stage-item">
-                    <img src="/img/cinema_mall/bhd-star-vincom-thao-dien-15379553942188.jpg" className="img-fluid mr-2" />
+                    <img src="/img/cinema_mall/bhd-star-vincom-thao-dien-15379553942188.jpg" className="img-fluid mr-2" alt="" />
                     <div className="stage__info">
                         {customBranch(branch.tenCumRap)}
                         <p className="stage__location mb-0 d-block d-md-none d-lg-block">{branch.diaChi}</p>
@@ -67,7 +73,9 @@ export default function Branch(props) {
                     </div>
                 </div>
             </a>
-            {generateCollapseMovies(branch.danhSachPhim)}
+            <div id={`${branch.maCumRap}`} ref={collapse} className="collapse d-initial d-md-none">
+                {generateCollapseMovies(branch.danhSachPhim)}
+            </div>
         </li>
     )
 }

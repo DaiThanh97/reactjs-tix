@@ -1,6 +1,7 @@
 import React from 'react'
-import './MovieInfo.scss';
 import { formatShowTime, formatShowEndTime } from './../../../utils/date';
+import LazyLoad from 'react-lazyload';
+import './MovieInfo.scss';
 
 export default function MovieInfo(props) {
     const { info } = props;
@@ -15,21 +16,23 @@ export default function MovieInfo(props) {
     }
 
     return (
-        <div className="movie__item">
-            <div className="movie__item-top">
-                <img src={info.hinhAnh} className="img-fluid mr-3" />
-                <div className="movie__info">
-                    <span className="movie__tag-red-sm">C18</span>
-                    <span className="info__title">{info.tenPhim}</span>
-                    <p className="info_statistic mb-0 mt-1">120 phút - TIX 7.7 - IMDb 0</p>
+        <LazyLoad once={true} offset={500}>
+            <div className="movie__item">
+                <div className="movie__item-top">
+                    <img src={info.hinhAnh} className="img-fluid mr-3" alt="" />
+                    <div className="movie__info">
+                        <span className="movie__tag-red-sm">C18</span>
+                        <span className="info__title">{info.tenPhim}</span>
+                        <p className="info_statistic mb-0 mt-1">120 phút - TIX 7.7 - IMDb 0</p>
+                    </div>
                 </div>
-            </div>
-            <div className="movie__item-bot mt-3">
-                <h1>2D Digital</h1>
-                <div className="show-time__list mt-3">
-                    {generateShowTime(info.lstLichChieuTheoPhim)}
+                <div className="movie__item-bot mt-3">
+                    <h1>2D Digital</h1>
+                    <div className="show-time__list mt-3">
+                        {generateShowTime(info.lstLichChieuTheoPhim)}
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </LazyLoad>
     )
 }

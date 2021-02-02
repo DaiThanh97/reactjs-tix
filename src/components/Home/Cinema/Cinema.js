@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { GET_DETAIL_MOVIES_BY_CINEMA_SAGA } from '../../../redux/constants/cinema.constant';
 import Branch from '../Branch/Branch';
@@ -15,7 +15,7 @@ export default function Cinema() {
 
     useEffect(() => {
         dispatch({ type: GET_DETAIL_MOVIES_BY_CINEMA_SAGA });
-    }, []);
+    }, [dispatch]);
 
     useEffect(() => {
         movieInfo.current.scrollTop = 0;
@@ -35,18 +35,18 @@ export default function Cinema() {
         setBranch(cine?.lstCumRap[0]?.maCumRap);
     }
 
-    const generateListCinemaMemo = useMemo(() => {
+    const generateListCinema = () => {
         return listDetailMoviesByCinema.map((cinema, index) => {
             return <li className="nav-item" key={index}>
-                <a className={`nav-link ${(index === 0 ? 'active' : '')}`}
+                <div className={`nav-link ${(index === 0 ? 'active' : '')}`}
                     data-toggle="tab"
                     onClick={() => handleCinema(cinema.maHeThongRap)}
                 >
-                    <img src={cinema.logo} />
-                </a>
+                    <img src={cinema.logo} alt="" />
+                </div>
             </li>
         })
-    }, [listDetailMoviesByCinema]);
+    }
 
     const generateListBranch = () => {
         if (listDetailMoviesByCinema.length === 0)
@@ -85,7 +85,7 @@ export default function Cinema() {
                 <div className="cinema__content">
                     <div className="cinema__icon">
                         <ul className="cinema__icon-nav nav nav-tabs flex-column">
-                            {generateListCinemaMemo}
+                            {generateListCinema()}
                         </ul>
                     </div>
                     <div className="cinema__stage">

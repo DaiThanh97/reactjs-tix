@@ -2,6 +2,7 @@
 @import 'helper/mixin';
 
 #chose-ticket {
+    display: block;
     position: relative;
     z-index: 100;
     transform: translateY(-55%);
@@ -42,11 +43,14 @@
                 &.holder-film {
                     width: 220px;
                 }
+                &.holder-stage {
+                    width: 100px;
+                }
             }
             .dropdown-menu {
                 max-height: 300px;
                 overflow: auto;
-                a {
+                .dropdown-item {
                     @include text($color-black-0, $fs-1, $fw-1);
                     transition: all 0.3s;
                     &:hover {
@@ -69,5 +73,8 @@
         .turn {
             flex: 1;
         }
+    }
+    @include respond-to('md') {
+        display: none;
     }
 }

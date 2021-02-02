@@ -11,7 +11,7 @@ export default function LogIn() {
                     </a>
                 </div>
                 <a href="/">
-                    <img src="./img/common/login-title.png" className="login-title" />
+                    <img src="./img/common/login-title.png" className="login-title" alt="" />
                 </a>
                 <form>
                     <div className="form-group text-left">

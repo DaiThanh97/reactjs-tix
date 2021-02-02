@@ -15,7 +15,7 @@ export default function StepBar() {
                 </li>
             </ul>
             <div className="user-info d-none d-md-block">
-                <img src="/img/common/avatar.png" className="avatar" />
+                <img src="/img/common/avatar.png" className="avatar" alt="" />
                 <span className="user-info__name ml-2">Tio Nguyen</span>
             </div>
         </div>

@@ -38,7 +38,7 @@ function Header(props) {
     return (
         <header>
             <nav className="navbar navbar-expand-md navbar-light header__nav py-0">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     <img className="nav__logo" src="./img/common/web-logo.png" alt="/" />
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -48,7 +48,7 @@ function Header(props) {
                     <ul className="navbar-nav nav__mid">
                         <li className="d-block d-md-none nav__user">
                             <a className="user__login border-0" href="/">
-                                <img className="avatar mr-2" src="./img/common/avatar.png" />
+                                <img className="avatar mr-2" src="./img/common/avatar.png" alt="" />
                                 <span>
                                     Đăng Nhập
                                 </span>
@@ -58,12 +58,12 @@ function Header(props) {
                     </ul>
                     <div className="d-none d-md-flex nav__user">
                         <a className="user__login pr-2 mr-2" href="/detail">
-                            <img className="avatar mr-2" src="./img/common/avatar.png" />
+                            <img className="avatar mr-2" src="./img/common/avatar.png" alt="" />
                             <span>
                                 Đăng Nhập
                             </span>
                         </a>
-                        <a className="user__location mx-2" href="#">
+                        <a className="user__location mx-2" href="/">
                             {/* <span>
                                 Hồ Chí Minh
                             </span> */}

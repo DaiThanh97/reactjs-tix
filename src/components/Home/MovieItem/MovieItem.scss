@@ -3,17 +3,63 @@
 
 #movie__info {
     position: relative;
-    margin: $mg-3 0;
-    padding: 0 $pd-1;
+    margin: $mg-3 $mg-1;
     width: 100%;
     cursor: pointer;
+
+    .placeholderImg {
+        width: 208px;
+        height: 318px;
+        border-radius: 6px;
+    }
+
     .movie__img {
         height: 318px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
         border-radius: 6px;
-        position: relative;
+    }
+
+    .movie__rating {
+        position: absolute;
+        top: 15px;
+        right: 12px;
+        background-color: #0c1b36cc;
+        border: 1px solid #1f2e46;
+        width: 54px;
+        height: 38px;
+        border-radius: 4px;
+        span {
+            @include text ($color-white-0, $fs-1 + 2, $fw-2);
+        }
+        img {
+            width: 8px;
+        }
+        .rate__star {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    // .movie__tag-green, .movie__tag-red {
+    //     position: absolute;
+    //     bottom: 5%;
+    //     left: 5%;
+    // }
+   
+    .info__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 318px;
+        background: linear-gradient(to top, $color-black-0,transparent 100%);
+        opacity: 0;
+        transition: all 0.3s;
+        border-radius: 6px;
         .icon__play {
             position: absolute;
             top: 50%;
@@ -27,34 +73,13 @@
             &:hover {
                 opacity: 0.6;
             }
-        }
-        .movie__rating {
+        }   
+        .btn-buy-ticket {
             position: absolute;
-            top: 15px;
-            right: 12px;
-            background-color: #0c1b36cc;
-            border: 1px solid #1f2e46;
-            width: 54px;
-            height: 38px;
-            border-radius: 4px;
-            span {
-                @include text ($color-white-0, $fs-1 + 2, $fw-2);
-            }
-            img {
-                width: 8px;
-            }
-            .rate__star {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-        .movie__tag-green, .movie__tag-red {
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
+            top: 102%;
         }
     }
+
     .movie__name {
         transition: all 0.2s;
         h2 {
@@ -66,21 +91,7 @@
             font-size: $fs-1 - 2;
         }
     }
-    .info__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to top, $color-black-0,transparent 100%);
-        opacity: 0;
-        transition: all 0.3s;
-        border-radius: 6px;
-        .btn-buy-ticket {
-            position: absolute;
-            top: 102%;
-        }
-    }
+
     &:hover {
         .icon__play {
             opacity: 1;
@@ -92,6 +103,8 @@
             opacity: 1;
         }
     }
+
+    // Responsive
     @include respond-to('md') {
         .movie__img {
             background-size: 100% 100%;

@@ -54,7 +54,7 @@ export default function Payment() {
             </div>
             <div className="paycheck">
                 <p className="text-center px-1 px-xl-5">
-                    <img src="/img/common/exclamation.png" className="mr-2" />
+                    <img src="/img/common/exclamation.png" className="mr-2" alt="" />
                     Vé đã mua không thể đổi hoặc hoàn tiền Mã vé sẽ được gửi qua tin nhắn <span className="paycheck__warn">ZMS</span> (tin nhắn Zalo) và <span className="paycheck__warn">Email</span> đã nhập.
                 </p>
                 <button className="btn-book">Đặt Vé</button>

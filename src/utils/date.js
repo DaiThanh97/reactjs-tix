@@ -1,9 +1,14 @@
-import moment from 'moment';
+import { format, add } from 'date-fns';
+
+export const formatDate = (date) => {
+    return format(new Date(date), "dd/MM/yyyy");
+}
 
 export const formatShowTime = (date) => {
-    return moment(date).format("HH:mm");
+    return format(new Date(date), "HH:mm");
 }
 
 export const formatShowEndTime = (date) => {
-    return moment(date).add(2, 'hours').format("HH:mm");
+    const result = add(new Date(date), { hours: 2 });
+    return format(result, "HH:mm");
 }

@@ -24,12 +24,12 @@ function Loading() {
                         <div className="loading__holder">
                             <motion.img
                                 animate={{
-                                    rotate: [2, 10, -10, 10, -10, 10, -10],
+                                    rotate: [5, 10, -10, 10, -10, 10, -10],
                                     scale: [0.85, 1],
                                     opacity: [1, 0]
                                 }}
                                 transition={{
-                                    duration: 1.5,
+                                    duration: 2
                                 }}
                                 src="./img/common/loading-logo.png" style={{ width: 150 }}
                             />
